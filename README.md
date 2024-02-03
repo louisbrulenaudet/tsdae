@@ -5,6 +5,8 @@ The acquisition of sentence embeddings often necessitates a substantial volume o
 
 The TSDAE schema comprises two components: an encoder and a decoder. Throughout the training process, TSDAE translates tainted sentences into uniform-sized vectors, necessitating the decoder to reconstruct the original sentences utilizing this sentence embedding. For good reconstruction quality, the semantics must be captured well in the sentence embeddings from the encoder. Subsequently, during inference, the encoder is solely utilized to form sentence embeddings.
 
+![Plot](https://github.com/louisbrulenaudet/tsdae/blob/main/thumbnail.png?raw=true)
+
 Moreover, TSDAE serves as an effective pre-training technique, surpassing the classical Mask Language Model (MLM) pre-training task in performance.
 
 ## Dependencies
