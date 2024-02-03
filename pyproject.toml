@@ -1,0 +1,46 @@
+[project]
+name = "tsdae"
+version = "1.0.1"
+description = "Tranformer-based Denoising AutoEncoder for Sentence Transformers Unsupervised pre-training."
+readme = "README.md"
+keywords = ["transformers", "sentence-transformers", "tsdae", "bert", "machine-learning", "NLP", "sentence-similarity", "nltk", "pre-training", "embeddings"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[options]
+packages = ["find:"]
+install_requires = [
+    "nltk",
+    "numpy",
+    "datasets",
+    "sentence_transformers",
+    "torch"
+]
+
+[metadata]
+name = "tsdae"
+version = "1.0.1"
+license = "Apache License 2.0"
+author = "Louis Brulé Naudet"
+author_email = "louisbrulenaudet@icloud.com"
+description = "Tranformer-based Denoising AutoEncoder for Sentence Transformers Unsupervised pre-training."
+long_description = "file: README.md"
+long_description_content_type = "text/markdown"
+url = "https://github.com/louisbrulenaudet/balena"
+homepage = "https://github.com/louisbrulenaudet/balena"
+project_urls = {repository = "https://github.com/louisbrulenaudet/tsdae"}
+keywords =  "transformers sentence-transformers tsdae bert machine-learning NLP sentence-similarity nltk pre-training embeddings"

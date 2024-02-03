@@ -9,11 +9,11 @@
 # limitations under the License.
 
 import re
+import ssl
 import nltk
 import random
 import logging
 from typing import Union, Optional
-from huggingface_hub import notebook_login
 from datasets import concatenate_datasets, load_dataset, Dataset
 
 from sentence_transformers.datasets import DenoisingAutoEncoderDataset
