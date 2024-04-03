@@ -856,7 +856,7 @@ class TSDAE:
             # Constrain dataset
             constrained_data = self.constrain_dataset(
                 shuffled_dataset=shuffled_dataset,
-                column="output",
+                column=column,
                 splitter=splitter,
                 num_to_keep=num_to_keep,
                 total_sentences=total_sentences,
