@@ -4,6 +4,6 @@ authors:
 - family-names: "Brulé Naudet"
   given-names: "Louis"
   orcid: "https://orcid.org/0000-0001-9111-4879"
-title: "Tranformer-based Denoising AutoEncoder for Sentence Transformers Unsupervised pre-training"
+title: "Transformer-based Denoising AutoEncoder for Sentence Transformers Unsupervised pre-training"
 version: 1.0.0
 date-released: 2024-02-02

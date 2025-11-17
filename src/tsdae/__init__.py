@@ -5,3 +5,5 @@
 # version = "1.0.0"
 
 from tsdae.tsdae import TSDAE
+
+__all__ = ["TSDAE"]

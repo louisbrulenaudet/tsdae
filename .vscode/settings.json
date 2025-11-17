@@ -1,0 +1,28 @@
+{
+    "cSpell.words": [
+        "autoencoder",
+        "bert",
+        "Brulé",
+        "constantlr",
+        "denoising",
+        "Denoising",
+        "imdb",
+        "isort",
+        "lemone",
+        "levelname",
+        "louisbrulenaudet",
+        "mbert",
+        "Naudet",
+        "nltk",
+        "numpy",
+        "punkt",
+        "pycodestyle",
+        "Pyflakes",
+        "pyright",
+        "pyupgrade",
+        "repr",
+        "setuptools",
+        "Transformer",
+        "tsdae"
+    ]
+}

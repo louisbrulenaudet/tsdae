@@ -1,8 +1,9 @@
 [project]
 name = "tsdae"
 version = "1.0.1"
-description = "Tranformer-based Denoising AutoEncoder for Sentence Transformers Unsupervised pre-training."
+description = "Transformer-based Denoising AutoEncoder for Sentence Transformers Unsupervised pre-training."
 readme = "README.md"
+license = {text = "Apache-2.0"}
 keywords = ["transformers", "sentence-transformers", "tsdae", "bert", "machine-learning", "NLP", "sentence-similarity", "nltk", "pre-training", "embeddings"]
 classifiers = [
     "Programming Language :: Python",
@@ -16,14 +17,11 @@ classifiers = [
     "Topic :: Software Development :: Libraries",
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
-
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
-[options]
-packages = ["find:"]
-install_requires = [
+authors = [
+    {name = "Louis Brulé Naudet", email = "louisbrulenaudet@icloud.com"}
+]
+requires-python = ">=3.11"
+dependencies = [
     "nltk",
     "numpy",
     "datasets",
@@ -31,16 +29,83 @@ install_requires = [
     "torch"
 ]
 
-[metadata]
-name = "tsdae"
-version = "1.0.1"
-license = "Apache License 2.0"
-author = "Louis Brulé Naudet"
-author_email = "louisbrulenaudet@icloud.com"
-description = "Tranformer-based Denoising AutoEncoder for Sentence Transformers Unsupervised pre-training."
-long_description = "file: README.md"
-long_description_content_type = "text/markdown"
-url = "https://github.com/louisbrulenaudet/balena"
-homepage = "https://github.com/louisbrulenaudet/balena"
-project_urls = {repository = "https://github.com/louisbrulenaudet/tsdae"}
-keywords =  "transformers sentence-transformers tsdae bert machine-learning NLP sentence-similarity nltk pre-training embeddings"
+[project.urls]
+repository = "https://github.com/louisbrulenaudet/tsdae"
+homepage = "https://github.com/louisbrulenaudet/tsdae"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=4.1.0",
+    "pre-commit-uv>=4.1.4",
+    "ruff>=0.9.3",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = {find = {where = ["src"]}}
+
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    "W",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # flake8-annotations
+    "ANN",
+    # flake8-print
+    "T20",
+]
+ignore = [
+    "B008",
+    "E501",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"**/{tests,docs}/*" = [
+    "ANN",
+    "E402",
+]
+
+[tool.ruff]
+fix = true
+
+[tool.ruff.format]
+quote-style = "double"
+line-ending = "auto"
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+
+[tool.pyright]
+exclude = [
+    "**/tests"
+]
+
+[tool.coverage.run]
+branch = true
+source = ["src/tsdae"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "pass",
+    "raise ImportError",
+]
+ignore_errors = true
